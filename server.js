@@ -2,8 +2,6 @@ const express = require('express');
 var cors = require('cors');
 const app = express();
 const port = 3000;
-
-//const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const BudgetSchema=require("./models/budget_schema")
 app.use(cors());
@@ -32,7 +30,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
         
 mongoose.set('useCreateIndex', true);
 
-//app.use(bodyParser.json())
+
 
 
 app.get('/budget', async (req, res) => {
